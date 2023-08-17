@@ -1,6 +1,6 @@
 {
   "name": "neat-js-utilities",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A collection of neat utility classes and functions for JavaScript.",
   "main": "index.js",
   "scripts": {
