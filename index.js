@@ -1,3 +1,5 @@
+const JSCollection = require('./src/JSCollection');
+
 module.exports = {
-    JSCollection: require('./src/JSCollection'),
+    JSCollection,
 }
