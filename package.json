@@ -1,7 +1,7 @@
 {
-  "name": "spaedesat-js-utilities",
-  "version": "0.1.1",
-  "description": "A collection of neat utility classes",
+  "name": "neat-js-utilities",
+  "version": "0.0.1",
+  "description": "A collection of neat utility classes and functions for JavaScript.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
