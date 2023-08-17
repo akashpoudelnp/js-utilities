@@ -1,2 +1,3 @@
-module.exports = JSCollection;
-
+module.exports = {
+    JSCollection: require('./src/JSCollection'),
+}

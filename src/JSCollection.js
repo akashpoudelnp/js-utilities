@@ -1,5 +1,8 @@
 /**
  * A neat class for working with arrays.
+ * @class JSCollection
+ * @example
+ * const collection = new JSCollection([1, 2, 3, 4, 5]);
  */
 class JSCollection {
 
@@ -14,6 +17,10 @@ class JSCollection {
 
     wheres = [];
 
+    /**
+     * Create a new JSCollection instance.
+     * @param array
+     */
     constructor(array) {
         this.originalArray = array;
     }
@@ -36,7 +43,7 @@ class JSCollection {
     }
 
     keys() {
-        return this.originalArray.keys()
+        return this.originalArray.keys();
     }
 
     values() {
