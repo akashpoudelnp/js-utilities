@@ -42,12 +42,17 @@ class JSCollection {
         return this;
     }
 
-    keys() {
-        return this.originalArray.keys();
-    }
+    /**
+     * Get the keys of the array.
+     */
+    keys(key = null) {
+        this.processWheres();
 
-    values() {
-        return this.originalArray.values();
+        if (key) {
+            return this.filteredArray.map((item) => item[key]);
+        }
+
+        return this.filteredArray.map((item, index) => index);
     }
 
     toArray() {
@@ -92,6 +97,44 @@ class JSCollection {
                 return b[key] - a[key];
             }
         });
+    }
+
+    /**
+     * Get the first item in the array.
+     * @returns {*}
+     */
+    first() {
+        this.processWheres();
+
+        return this.filteredArray[0];
+    }
+
+    /**
+     * Get the last item in the array.
+     */
+    last() {
+        this.processWheres();
+
+        return this.filteredArray[this.filteredArray.length - 1];
+    }
+
+    /**
+     * Get the sum of the items in the array.
+     * @param key
+     * @returns {number}
+     */
+    sum(key) {
+        this.processWheres();
+
+        let sum = this.filteredArray.reduce((total, item) => {
+            return total + item[key];
+        }, 0);
+
+        if (!sum) {
+            return 0;
+        }
+
+        return sum;
     }
 }
 
