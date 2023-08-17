@@ -4,7 +4,7 @@
  * @example
  * const collection = new JSCollection([1, 2, 3, 4, 5]);
  */
-export default class JSCollection {
+class JSCollection {
 
     /**
      * Represents the original array.
@@ -95,3 +95,4 @@ export default class JSCollection {
     }
 }
 
+export {JSCollection};
